@@ -1,1 +1,1 @@
-# Assembly-lab-a.a-2019-2020
+# Laboratori di Assembly della materia Calcolatori elettronici
