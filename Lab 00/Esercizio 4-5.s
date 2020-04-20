@@ -18,7 +18,7 @@ main:
 				addi $t0, 0x04		# add 4 to the address to point to the next cell
 				addi $t3, 1			# add 1 to the counter 
 				bne $t3, DIM, cicle	# check if we cycled through the whole vector
-		sw $t1, wResult
+		sw $t1, wResult # store the content of t1 in wResult
 		lw $t4, wResult
 
 li $v0, 10
