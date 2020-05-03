@@ -9,3 +9,7 @@ Homework of the class "calcolatori elettronici" a.a. 2019-2020
 - #### Lab 1:
 		
 		A little bit more in depth use of sub and add, overflow ad use of byte instead of word.
+
+- #### Lab 2:
+		
+		Use of logical and jump instruction
