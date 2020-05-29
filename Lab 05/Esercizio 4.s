@@ -6,10 +6,10 @@
 		NEXT_DIAG = 4*(DIM+1)
 
 		matrix:  
-		.word  1, 1, 9, 0, 0
-		.word  1, 2, 0, 1, 0
-		.word  9, 0, 3, 0, 0
-		.word  0, 1, 0, 4, 0
+		.word  1, 0, 0, 0, 1
+		.word  0, 2, 0, 0, 0
+		.word  0, 0, 3, 0, 0
+		.word  0, 0, 0, 4, 0
 		.word  0, 0, 0, 0, 5
 
 		.text
@@ -24,9 +24,9 @@ main:
 
 outerLoop:
 		add $t0, $t6, NEXT_COL # scans through row starting from [0,1]
-		add $t1, $t6, NEXT_ROW # scans through column starting from [1,0]
+		add $t1, $t6, NEXT_ROW # scans through column starting from [1,0]	
 		add $t7, $t5, 1 # index of element in a row/col we computed
-		
+			
 		innerLoop:
 			lw $t3, matrix($t0)
 			lw $t4, matrix($t1)
@@ -36,7 +36,7 @@ outerLoop:
 			add $t0, $t0, NEXT_COL
 			add $t1, $t1, NEXT_ROW
 			add $t7, $t7, 1 
-			bne $t7, DIM, innerLoop #TODO: va a 6 sull'ultimo ciclo
+			blt $t7, DIM, innerLoop #TODO: va a 6 sull'ultimo ciclo
 
 		add $t6, $t6, NEXT_DIAG
 		add $t5, $t5, 1
