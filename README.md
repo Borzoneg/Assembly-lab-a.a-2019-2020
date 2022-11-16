@@ -29,3 +29,7 @@ Homework of the class "calcolatori elettronici" a.a. 2019-2020
 - #### Lab 6:
 
 		Call to procedures, use of register as value and return value
+		
+- #### Lab 7:
+		
+		More complex procedure, use of registers as input/output
